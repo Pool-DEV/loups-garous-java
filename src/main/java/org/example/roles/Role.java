@@ -1,11 +1,11 @@
 package org.example.roles;
 
-public class BaseRole {
-    private String name;
-    private String description;
-    private Team team;
+public class Role {
+    private final String name;
+    private final String description;
+    private final Team team;
 
-    public BaseRole(String name, String description, Team team) {
+    public Role(String name, String description, Team team) {
         this.name = name;
         this.description = description;
         this.team = team;
@@ -22,4 +22,5 @@ public class BaseRole {
     public String getDescription() {
         return description;
     }
+
 }
