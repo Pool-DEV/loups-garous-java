@@ -57,7 +57,7 @@ public class GameManager {
 
         // Définition des rôles uniques (ajoutés une seule fois si le nombre de joueurs le permet)
         List<Role> uniqueRoles = new ArrayList<>(List.of(
-                Cupid.create(), Hunter.create(), LittleGirl.create(), Seer.create(), Thief.create(), Witch.create()
+                new Cupid(), new Hunter(), new LittleGirl(), new Seer(), new Thief(), new Witch()
         ));
 
         // Définition des Loups-Garous (≈ 1 loup pour 3-4 joueurs)
@@ -78,7 +78,7 @@ public class GameManager {
 
         // Complément avec des Villageois
         while (this.roles.size() < playerCount) {
-            this.roles.add(SimpleVillager.create());
+            this.roles.add(new SimpleVillager());
         }
 
         // Mélanger la liste des rôles
